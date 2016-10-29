@@ -3,7 +3,7 @@ using LeDragon.CSD3.Models;
 
 namespace LeDragon.CSD3.Scales
 {
-    public class LinearScale
+    public class LinearScale : IScale<Double, Double>
     {
         public LinearScale() : this(new Range<Double>(0, 1), new Range<Double>(0, 1))
         {
