@@ -28,11 +28,26 @@ namespace LeDragon.CSD3.Scales.Test
             Assert.IsNotNull(sut.Range);
         }
 
-        [Test] public void Should_Have_A_Default_Domain()
+        [Test]
+        public void Should_Have_A_Default_Domain()
         {
             var sut = new LinearScale();
             Assert.IsNotNull(sut.Domain);
         }
+        [Test]
+        public void Should_Scale_Value()
+        {
+            var sut = new LinearScale(new Range<Double>(0,1), new Range<Double>(0,100));
+            var scaled = sut.Scale(0.3);
+            Assert.AreEqual(30,scaled);
+        }
 
+        [Test]
+        public void Should_Invert_Value()
+        {
+            var sut = new LinearScale(new Range<Double>(0, 1), new Range<Double>(0, 100));
+            var scaled = sut.Invert(30);
+            Assert.AreEqual(0.3, scaled);
+        }
     }
 }
