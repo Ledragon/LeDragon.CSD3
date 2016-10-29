@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeDragon.CSD3.Models", "LeD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeDragon.CSD3.Array", "LeDragon.CSD3.Array\LeDragon.CSD3.Array.csproj", "{79140B63-46B3-4894-A630-2084488B959C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeDragon.CSD3.Array.Test", "LeDragon.CSD3.Array.Test\LeDragon.CSD3.Array.Test.csproj", "{6823075B-0E9F-4E30-A5F1-15EECFB1B423}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,11 +37,16 @@ Global
 		{79140B63-46B3-4894-A630-2084488B959C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79140B63-46B3-4894-A630-2084488B959C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79140B63-46B3-4894-A630-2084488B959C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6823075B-0E9F-4E30-A5F1-15EECFB1B423}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6823075B-0E9F-4E30-A5F1-15EECFB1B423}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6823075B-0E9F-4E30-A5F1-15EECFB1B423}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6823075B-0E9F-4E30-A5F1-15EECFB1B423}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{3326D0F6-8667-41EE-8ABF-07C8319C9CD4} = {382FB7F9-B492-40FA-9E90-42D7BD888E48}
+		{6823075B-0E9F-4E30-A5F1-15EECFB1B423} = {382FB7F9-B492-40FA-9E90-42D7BD888E48}
 	EndGlobalSection
 EndGlobal
