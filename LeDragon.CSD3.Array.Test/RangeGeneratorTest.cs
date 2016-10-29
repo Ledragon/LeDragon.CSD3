@@ -26,6 +26,8 @@ namespace LeDragon.CSD3.Array.Test
             Assert.AreEqual(11, result.Count);
             Assert.AreEqual(0, result[0]);
             Assert.AreEqual(0.4, result[4]);
+            //Fail
+            Assert.AreEqual(0.3, result[3]);
         }
     }
 }

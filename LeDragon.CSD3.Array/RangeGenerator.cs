@@ -31,6 +31,7 @@ namespace LeDragon.CSD3.Array
         /// <returns>The list of generated values.</returns>
         public static List<Double> Create(Double start, Double end, Int32 count)
         {
+            //TODO use decimal if possible, to avoid numeric noise
             var result = new List<Double>();
             for (var i = 0; i < count + 1; i++)
             {
