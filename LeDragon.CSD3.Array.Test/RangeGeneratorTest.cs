@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using NUnit.Framework;
 
 namespace LeDragon.CSD3.Array.Test
@@ -27,7 +23,7 @@ namespace LeDragon.CSD3.Array.Test
             Assert.AreEqual(0, result[0]);
             Assert.AreEqual(0.4, result[4]);
             //Fail
-            Assert.AreEqual(0.3, result[3]);
+            Assert.IsTrue(Math.Abs(0.3- result[3])<1e-8);
         }
     }
 }

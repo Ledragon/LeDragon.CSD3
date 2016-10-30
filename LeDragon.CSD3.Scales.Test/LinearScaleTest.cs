@@ -8,6 +8,22 @@ namespace LeDragon.CSD3.Scales.Test
     public class LinearScaleTest
     {
         [Test]
+        public void Should_Allow_To_Set_Domain()
+        {
+            var sut = new LinearScale();
+            sut.Domain(new Range<Double>(0, 5));
+            Assert.AreEqual(5, sut.Domain().Max);
+        }
+
+        [Test]
+        public void Should_Allow_To_Set_Range()
+        {
+            var sut = new LinearScale();
+            sut.Range(new Range<Double>(0, 5));
+            Assert.AreEqual(5, sut.Range().Max);
+        }
+
+        [Test]
         public void Should_Have_A_Constructor_With_Domain_And_Range()
         {
             var sut = new LinearScale(new Range<Double>(0, 1), new Range<Double>(0, 100));
@@ -18,14 +34,14 @@ namespace LeDragon.CSD3.Scales.Test
         public void Should_Have_A_Default_Domain()
         {
             var sut = new LinearScale();
-            Assert.IsNotNull(sut.Domain);
+            Assert.IsNotNull(sut.Domain());
         }
 
         [Test]
         public void Should_Have_A_Default_Range()
         {
             var sut = new LinearScale();
-            Assert.IsNotNull(sut.Range);
+            Assert.IsNotNull(sut.Range());
         }
 
         [Test]

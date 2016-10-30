@@ -11,13 +11,35 @@ namespace LeDragon.CSD3.Scales
 
         public LinearScale(Range<Double> range, Range<Double> domain)
         {
-            this.Range = range;
-            this.Domain = domain;
+            this.Range(range);
+            this._domain = domain;
         }
 
-        public Range<Double> Range { get; }
+        private Range<Double> _range;
+        private Range<Double> _domain;
 
-        public Range<Double> Domain { get; }
+        public Range<Double> Domain()
+        {
+            return this._domain;
+        }
+
+        public IScale<Double, Double> Domain(Range<Double> domain)
+        {
+            this._domain = domain;
+            return this;
+        }
+
+        public Range<Double> Range()
+        {
+            return this._range;
+        }
+
+        public IScale<Double, Double> Range(Range<Double> range)
+        {
+            this._range = range;
+            return this;
+        }
+
 
         /// <summary>
         ///     Given a value in range, scales the given value to the domain.
@@ -26,7 +48,7 @@ namespace LeDragon.CSD3.Scales
         /// <returns>The scaled value.</returns>
         public Double Scale(Double value)
         {
-            var result = (this.Domain.Max-this.Domain.Min)/(this.Range.Max - this.Range.Min)*(value - this.Range.Min);
+            var result = (this._domain.Max-this._domain.Min)/(this._range.Max - this._range.Min)*(value - this._range.Min);
             return result;
         }
 
@@ -37,7 +59,7 @@ namespace LeDragon.CSD3.Scales
         /// <returns>The inverted value.</returns>
         public Double Invert(Double value)
         {
-            var result = (this.Range.Max - this.Range.Min) / (this.Domain.Max - this.Domain.Min) * (value - this.Domain.Min);
+            var result = (this._range.Max - this._range.Min) / (this._domain.Max - this._domain.Min) * (value - this._domain.Min);
             return result;
         }
     }
